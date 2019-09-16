@@ -1,0 +1,12 @@
+  <h1>HI from app.component</h1>
+  <div class="container">
+    <div class="body">
+      <button (click)="getTasksFromService()">Get All Tasks</button>
+      <div *ngFor="let task of tasks">
+        <p>{{task.title}}<button (click)="showTask(task)">Show</button></p>
+      </div>
+      <app-task *ngIf="selectedTask" [taskToShow]="selectedTask"></app-task>
+    </div>
+  </div>
+
+<router-outlet></router-outlet>
