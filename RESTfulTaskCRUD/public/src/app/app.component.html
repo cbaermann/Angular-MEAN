@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>RESTful Tasks API</h1>
+  <h2>Create A Task!</h2>
+  <form (submit)="onSubmit()" class="postForm">
+    <p>{{newTask | json}}</p>
+    <label>Task Title:
+      <input type="text" name="newTask.title" [(ngModel)]="newTask.title"/>
+    </label>
+    <label>Task description:
+      <input type="text" name="newTask.description" [(ngModel)]="newTask.description"/>
+    </label>
+    <input type="submit" value="Create Task">
+  </form>
+  <h2>All the Tasks:</h2>
+  <button (click) = "getTasksFromService()">Get All Tasks!</button>
+  <div *ngFor = "let task of tasks">
+    <p>{{task.title}}<button (click)="taskForm(task)">Edit</button></p>
+    <p>{{task.description}}<button (click) = "onDelete(task)">Delete</button></p><hr>
+    <div *ngIf = "something">
+      <p>{{task.title}} <br> {{task.description}}</p>
+    </div>
+  </div>
+  <form *ngIf="editTask" (submit)="onEdit()">
+    <label>Task Title:
+      <input type="text" name="editTask.title" [(ngModel)]="editTask.title">
+    </label>
+    <label>Task Description:
+      <input type="text" name="editTask.description" [(ngModel)]="editTask.description">
+    </label>
+    <input type="submit" value="Update Task">
+  </form>
+
+
+</body>
+</html>
+
+<router-outlet></router-outlet>
