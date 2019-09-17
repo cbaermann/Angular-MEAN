@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
       console.log("Got data from post", data);
       this.newCake = {baker: "", image: ""};
     })
+    this.getCakesFromService();
   }
 
   createRating(cakeId){
