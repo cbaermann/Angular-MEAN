@@ -14,9 +14,10 @@ export class CakeComponent implements OnInit {
     console.log(this.showCake);
     let sum = 0;
     for(let rating of this.showCake.ratings){
+      console.log(rating)
       sum += rating.stars
     }
-    this.cakeRating = sum / this.showCake.ratings
+    this.cakeRating = sum / this.showCake.ratings.length
   }
 
 }
