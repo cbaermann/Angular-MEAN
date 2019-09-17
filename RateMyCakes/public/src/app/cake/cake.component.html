@@ -1,0 +1,8 @@
+<img [src]="showCake.image">
+<p>Baked By: {{showCake.baker}}</p>
+<h5>Average Rating: {{cakeRating}}</h5>
+<div *ngFor="let review of showCake.ratings">
+    <p>{{review.comment}}</p>
+    <p>{{review.stars}} stars</p>
+</div>
+

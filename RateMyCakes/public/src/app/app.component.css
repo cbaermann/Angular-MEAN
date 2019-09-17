@@ -1,0 +1,22 @@
+img{
+    height: 300px;
+    width:300px;
+}
+
+.cakeBox{
+    display: inline-block;
+    overflow: auto;
+    height: 450px;
+    width: 450px;
+    border: 1px solid black;
+    margin-left: 40px;
+    text-align: center;
+
+}
+
+.form{
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid black;
+    height: 200px;
+}
