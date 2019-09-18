@@ -1,0 +1,8 @@
+<a [routerLink]="['/']">Home</a>
+<form (submit)="onEdit()">
+    <p>{{editAuthor | json}}</p>
+    <label>Name:
+        <input type="text" name="editAuthor.name" [(ngModel)]="editAuthor.name">
+    </label>
+    <button type="submit">Submit</button>
+</form>

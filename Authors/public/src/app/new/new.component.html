@@ -1,0 +1,12 @@
+<a [routerLink]="['/']">Home</a>
+<h4>Add a new author:</h4>
+<div class="form">
+    <form (submit)="onSubmit()" class="postForm">
+        <p>{{newAuthor | json}}</p>
+        <label>Name:
+            <input type="text" name="newAuthor.name" [(ngModel)]="newAuthor.name">
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
