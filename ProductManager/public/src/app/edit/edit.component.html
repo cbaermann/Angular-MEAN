@@ -1,0 +1,14 @@
+<p>edit works!</p>
+<form (submit)="onEdit()">
+    <label>Title:
+        <input type="text" name="editProduct.title" [(ngModel)]="editProduct.title">
+    </label>
+    <label>Price:
+        <input type="text" name="editProduct.price" [(ngModel)]="editProduct.price">
+    </label>
+    <label>Image URL:
+        <input type="text" name="editProduct.image" [(ngModel)]="editProduct.image">
+    </label>
+    <button type="submit">Update</button>
+    <button (click)="onDelete(editProduct)">Delete</button>
+</form>

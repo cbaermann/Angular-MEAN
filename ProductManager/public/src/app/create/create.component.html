@@ -1,0 +1,19 @@
+<div class="create">
+    <h1>Create a New Product</h1>
+    <div class="form">
+        <form (submit)="onSubmit()" class="postForm">
+            <p>{{newProduct | json}}</p>
+            <label>Title:
+                <input type="text" name="newProduct.title"[(ngModel)]="newProduct.title">
+            </label>
+            <label>Price:
+                <input type="text" name="newProduct.price"[(ngModel)]="newProduct.price">
+            </label>
+            <label>Image URL:
+                <input type="text" name="newProduct.image"[(ngModel)]="newProduct.image">
+            </label>
+            <button type="submit">Submit</button>
+            <button [routerLink]="['/products']">Cancel</button>
+        </form>
+    </div>
+</div>

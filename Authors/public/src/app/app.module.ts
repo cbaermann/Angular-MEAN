@@ -22,7 +22,7 @@ import { AuthorsComponent } from './authors/authors.component';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

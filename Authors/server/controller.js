@@ -1,4 +1,5 @@
 const author = require('./models');
+const path = require('path')
 
 module.exports = {
     allAuthors: function(req, res){
@@ -32,4 +33,10 @@ module.exports = {
             .then(data => res.json(data))
             .catch(err => res.json(err))
     },
+
+    Failsafe: function(req, res){
+        res.sendFile(path.resolve(__dirname, '../public/dist/public/index.html'))
+    }
+
+
 }
